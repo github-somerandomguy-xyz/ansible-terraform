@@ -1,0 +1,36 @@
+---
+- name: download golang tar
+  get_url:
+    url: "{{ go_download_url }}"
+    dest: /tmp/
+    mode: 0440
+  become: yes
+
+- name: remove old installation of go
+  file:
+    path: /usr/local/go
+    state: absent
+  become: yes
+
+- name: extract tarball
+  unarchive:
+    src: "/tmp/go{{go_version}}.linux-amd64.tar.gz"
+    dest: /usr/local
+    copy: no
+  become: yes
+
+- name: clone  terraform-provider-libvirt
+  shell: /usr/local/go/bin/go get github.com/dmacvicar/terraform-provider-libvirt
+  args:
+    executable: /bin/bash
+
+- name: install terraform-provider-libvirt
+  shell: /usr/local/go/bin/go install github.com/dmacvicar/terraform-provider-libvirt
+  args:
+    executable: /bin/bash
+  
+- name: cleanup residue
+  file: 
+    path: "/tmp/go{{go_version}}.linux-amd64.tar.gz"
+    state: absent
+  become: yes

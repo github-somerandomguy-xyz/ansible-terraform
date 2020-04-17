@@ -8,10 +8,13 @@
 # .tfvars files
 *.tfvars
 
-# security stuff: 
-#commenting out for boiler plate push reasons, should uncomment when using it for a real project.
-# _inventory/
-# _logs
-# _ssh
-# _ssl
-# ansible.cfg
+
+# security stuff
+_investory
+_logs
+_ssh
+_ssl
+
+# temp files for local testing
+#temp/*
+#scratchpad

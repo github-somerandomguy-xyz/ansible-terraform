@@ -1,8 +1,10 @@
 ---
 - hosts: host-servers
   remote_user: "{{ ansible_user }}"
-  become: no
   roles:
     - { role: common,               tags: [ 'common'  ] }
     - { role: kvm,               tags: [ 'kvm'  ] }
-
+    - { role: terraform,               tags: [ 'terraform'  ] }
+    - { role: terraform-libvirt-provider,               tags: [ 'terraform-libvirt-provider'  ] }
+    
+    

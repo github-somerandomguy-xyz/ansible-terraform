@@ -4,4 +4,4 @@
   become: true
   roles:
     - { role: common,               tags: [ 'common'   ] }
-    - { role: hardening,            tags: [ 'common'   ] }
+#    - { role: hardening,            tags: [ 'common'   ] }

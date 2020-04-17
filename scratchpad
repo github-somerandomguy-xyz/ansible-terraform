@@ -1,0 +1,44 @@
+ansible-playbook plabooks/kvm/install_Debian.yml --ask-become-pass
+
+install go ansable playbook
+http://clouds.freeideas.cz/subdom/clouds/2017/08/02/ansible-install-golang-and-set-env-variables/
+
+
+tut on terraform with libvirt:
+https://titosoft.github.io/kvm/terraform-and-kvm/
+
+
+using rsync for backup:
+
+sudo rsync -aAXv --delete --exclude=/dev/* --exclude=/proc/* --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* --exclude=/mnt/* --exclude=/media/* --exclude="swapfile" --exclude="lost+found" --exclude=".cache" --exclude="Downloads" --exclude=".VirtualBoxVMs" --exclude=".ecryptfs" /source /destination
+
+sudo rsync -aAXv --delete --dry-run --exclude=/dev/* --exclude=/proc/* --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* --exclude=/mnt/* --exclude=/media/* --exclude="swapfile" --exclude="lost+found" --exclude=".cache" --exclude="Downloads"  --exclude=".ecryptfs" / //media/surya/Elements/backups/offcie-data-backup/rsyncbackuprootfolder
+
+https://docs.bitnami.com/bch/apps/lets-chat/administration/change-reset-password/
+
+to save the git credentials in the local store:
+git config --global credential.helper store
+
+
+used this to create a storage pool of type dir
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/virtualization_administration_guide/sect-virtualization-storage_pools-creating-local_directories-virsh
+
+understanding the libvirt virtual networking concepts:
+https://wiki.libvirt.org/page/VirtualNetworking
+
+
+some blog post on using the ssh_bastion host config in ansible.cfg:
+https://blog.scottlowe.org/2015/12/24/running-ansible-through-ssh-bastion-host/
+
+
+ansible quick ref:
+https://github.com/lorin/ansible-quickref
+
+----------------------------------------------------------------
+mahanubavulu list:
+https://github.com/anmolnagpal (took booiler pate for ansible here)
+
+tut and guide for thatrandomitguy project:
+https://averagelinuxuser.com/about
+
+https://itc-life.ru/install-mkisofs-on-debian/ (simple post that soved a major prob with installing mkisofs package on debian).
