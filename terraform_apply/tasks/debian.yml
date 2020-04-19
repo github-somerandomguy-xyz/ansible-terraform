@@ -6,24 +6,6 @@
     owner: "{{ansible_user}}"
     group: "{{ansible_user}}"
 
-- name: init terraform in the home dir
-  shell:
-    cmd: terraform init
-    chdir: "{{remote_home_dir}}/"
-
-- name: create plugin dir
-  file:
-    path: "{{ terraform_plugin_dir }}"
-    state: directory
-
-- name: copy libvirt plugin to terraform plugin dir
-  copy:
-    src: "{{ go_libvirt_plugin_dir }}"
-    dest: "{{ terraform_plugin_dir }}"
-    mode: a+x
-    remote_src: yes
-    owner: "{{ansible_user}}"
-    group: "{{ansible_user}}"
 
 - name: copy terraform project files to the remote terraform directory
   copy:
