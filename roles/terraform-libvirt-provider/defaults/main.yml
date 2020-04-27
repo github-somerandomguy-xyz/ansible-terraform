@@ -3,3 +3,5 @@
     go_version: 1.14.1
     go_download_url: "https://dl.google.com/go/go{{ go_version }}.linux-amd64.tar.gz"
     terraform_provider_libvirt: github.com/dmacvicar/terraform-provider-libvirt
+    terraform_plugin_dir: "{{remote_home_dir}}/.terraform.d/plugins/"
+    go_libvirt_plugin_dir: "{{remote_home_dir}}/go/bin/terraform-provider-libvirt"
