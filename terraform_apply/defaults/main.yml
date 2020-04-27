@@ -1,6 +1,0 @@
----
-    terraform_project: "terraform_project"
-    terraform_plugin_dir: "{{remote_home_dir}}/.terraform.d/plugins/"
-    go_libvirt_plugin_dir: "{{remote_home_dir}}/go/bin/terraform-provider-libvirt"
-
-    #terraform_plugin_dir: "{{remote_home_dir}}/.terraform.d/plugins/linux_amd64"
