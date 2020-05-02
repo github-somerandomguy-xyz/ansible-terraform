@@ -1,8 +1,8 @@
 ---
-- name: include common debian
+- name: include terraform debian
   import_tasks: debian.yml
   become: yes
   tags:
-    - common
+    - terraform
 
 
