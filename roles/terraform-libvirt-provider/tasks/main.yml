@@ -1,7 +1,7 @@
 ---
-- name: include terraform-provider-libvirt debian
+- name: include terraform-libvirt-provider debian
   import_tasks: debian.yml
   tags:
-    - terraform-provider-libvirt
+    - terraform-libvirt-provider
 
 
